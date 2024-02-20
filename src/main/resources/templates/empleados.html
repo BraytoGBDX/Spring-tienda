@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tabla Empleados</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <a href="/tienda/productos" class="btn btn-primary mr-2">Productos</a>
+        <a href="/tienda/ventas" class="btn btn-secondary mr-2">Ventas</a>
+        <a href="/tienda/proovedores" class="btn btn-success mr-2">Proveedores</a>
+        <a href="/tienda" class="btn btn-warning mr-2">Inicio</a>
+        <a href="/tienda/clientes" class="btn btn-danger mr-2">Clientes</a>
+    </div>
+
+    <div class="container mt-5">
+        <h2>Tabla Empleados</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido Materno</th>
+                    <th>Apellido Paterno</th>
+                    <th>Horario</th>
+                    <th>Puesto</th>
+    
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="empleado: ${empleados}">
+                    <td th:text="${empleado.codigoEmpleado}"></td>
+                    <td th:text="${empleado.nombre}">empleado</td>
+                    <td th:text="${empleado.apPaterno}">empleado</td>
+                    <td th:text="${empleado.apMaterno}">empleado</td>
+                    <td th:text="${empleado.horario}">empleado</td>
+                    <td th:text="${empleado.puesto}">proveedor</td>
+    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+<!-- Agrega la referencia a Bootstrap JS y Popper.js (necesario para algunos componentes de Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></s
